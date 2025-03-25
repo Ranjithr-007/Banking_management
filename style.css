@@ -101,7 +101,7 @@ header {
 }
 
 .navbar {
-  background: var(--white);
+  background: var(--dark-blue);
   display:         flex;
   justify-content: space-between;
   align-items:     center;
@@ -204,7 +204,7 @@ main { overflow: hidden; }
 
 .home-title {
   font-size: 38px;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--dark-blue);
   text-align: center;
   margin-bottom: 20px;
