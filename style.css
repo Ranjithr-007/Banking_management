@@ -361,8 +361,11 @@ footer {
 
 .social-link {
   display: flex;
+  width: 100%;
   gap: 10px;
   margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
 }
 
 .social-link ion-icon {
@@ -573,8 +576,8 @@ footer .btn-primary { margin-bottom: 30px; }
   }
 
   .service-card-group {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
   }
   
   .service-card { text-align: left; }
@@ -696,6 +699,11 @@ footer .btn-primary { margin-bottom: 30px; }
 .expense-card {
   width: 49%;
   flex: 0 0 49%;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
   text-align: start;
   padding: 4rem 1rem 4rem 4rem;
   background: #fff;
@@ -728,13 +736,75 @@ footer .btn-primary { margin-bottom: 30px; }
   }
 
   .expense-card {
-      width: 100%; /* 1 card per slide */
+      width: 80%; /* 1 card per slide */
       flex: 0 0 100%;
-      padding: 2rem 0.5rem 2rem 1re0;
+      padding: 2rem 2rem 2rem 1rem;
       margin-right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
   }
 
   .expense-card-text {
     max-width: 300px;
   }
+
+  .expense-card-title {
+    max-width: 300px;
+  }
+
+}
+
+.explore-card {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.explore-card-1 img {
+  min-width: 50%;
+}
+
+.explore-card-2 {
+  min-width: 50%;
+}
+
+.explore-card-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.explore-card-2 h4 {
+  margin: 2rem 0;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 36px;
+}
+
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.footer-content p {
+  margin: 2rem 0;
+}
+
+
+.footer-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
 }
