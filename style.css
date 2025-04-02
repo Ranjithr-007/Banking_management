@@ -93,7 +93,7 @@ img, span, svg { display: block; }
 \*-----------------------------------*/
 
 header { 
-  position: fixed; 
+  position: static; 
   top:  0;
   left: 0;
   width: 100%;
@@ -185,7 +185,7 @@ header {
 main { overflow: hidden; }
 
 .home {
-  background: var(--very-light-gray);
+  background: var(--dark-blue);
   padding-bottom: 60px;
 }
 
@@ -205,7 +205,7 @@ main { overflow: hidden; }
 .home-title {
   font-size: 38px;
   font-weight: 500;
-  color: var(--dark-blue);
+  color: #fff;
   text-align: center;
   margin-bottom: 20px;
   padding: 0 20px;
