@@ -754,6 +754,11 @@ footer .btn-primary { margin-bottom: 30px; }
     max-width: 300px;
   }
 
+  .banner-video {
+    width: fit-content;
+    height: fit-content;
+  }
+
 }
 
 .explore-card {
@@ -807,4 +812,21 @@ footer .btn-primary { margin-bottom: 30px; }
   align-items: center;
   flex-direction: column;
   gap: 2rem;
+}
+
+.banner-video {
+  width: 767px;
+  height: 900px;
+}
+
+@media (max-width: 600px) {
+  .banner-video {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .home .wrapper {
+    width: 100%;
+  }
+
 }

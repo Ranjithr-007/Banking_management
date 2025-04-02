@@ -98,7 +98,7 @@
         </div> -->
 
         <div >
-          <video width="767" height="900" controls autoplay muted loop>
+          <video class="banner-video" autoplay loop muted playsinline>
             <source src="./videos/wi_banner.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
@@ -478,25 +478,25 @@
 
     navbarToggleBtn.addEventListener('click', navbarToggleFunc);
 
-
     let index = 0;
     const sliderWrapper = document.querySelector(".slider-wrapper");
+    const expenseCards = document.querySelectorAll(".expense-card");
     
     function updateSlider() {
         const screenWidth = window.innerWidth;
-        let totalSlides;
-        
-        if (screenWidth <= 500) {
-            totalSlides = document.querySelectorAll(".expense-card").length; // 1 per slide
-        } else {
-            totalSlides = document.querySelectorAll(".expense-card").length / 2; // 2 per slide
-        }
-
-        index = (index + 1) % totalSlides;
-        sliderWrapper.style.transform = `translateX(-${index * 100}%)`;
+        const slidesPerView = screenWidth <= 600 ? 1 : 2; // 1 card per view on mobile, 2 on desktop
+        const totalSlides = Math.ceil(expenseCards.length / slidesPerView); // Correct calculation
+    
+        index = (index + 1) % totalSlides; // Loop back to start
+        const translateX = -(index * (100 / slidesPerView)); // Move slides
+    
+        sliderWrapper.style.transform = `translateX(${translateX}%)`;
     }
-
+    
+    // Start auto-slide every 3 seconds
     setInterval(updateSlider, 3000);
+    
+
 
   </script>
 
