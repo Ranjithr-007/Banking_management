@@ -149,6 +149,14 @@
               wherever you are in the world.</p>
           </div>
 
+          <div class="col-md-2 p-4 p-sm-5 center">
+            <div class="list-center-wrap" data-aos="fade-up" data-aos-delay="100">
+              <div class="center-icon" style="display: flex; justify-content: center; align-items: center;">
+                <img src="./images/Eagle_Logo.png" alt="icon" style="height: 250px;width: 250px;">
+              </div>
+            </div>
+          </div>
+
           <div class="service-card">
             <img src="./images/icon-budgeting.svg" alt="Icon for simple budgeting" class="card-icon">
 
@@ -197,35 +205,68 @@
 
 
         <div class="slider-container">
-          <div class="slider-wrapper">
-              <div class="expense-card">
-                  <img src="./images/icon-online.svg" alt="Online Banking" class="expense-card-icon">
-                  <h3 class="expense-card-title">Stay on Top View all your expenses in one place</h3>
-                  <p class="expense-card-text"></p>
-              </div>
-  
-              <div class="expense-card">
-                  <img src="./images/icon-budgeting.svg" alt="Simple Budgeting" class="expense-card-icon">
-                  <h3 class="expense-card-title">Add new expenses with just a few taps</h3>
-                  <p class="expense-card-text"></p>
-              </div>
-  
-              <div class="expense-card">
-                  <img src="./images/icon-onboarding.svg" alt="Fast Onboarding" class="expense-card-icon">
-                  <h3 class="expense-card-title">Categorize spending for better organization</h3>
-                  <p class="expense-card-text"></p>
-              </div>
-  
-              <div class="expense-card">
-                  <img src="./images/icon-api.svg" alt="Open API" class="expense-card-icon">
-                  <h3 class="expense-card-title">Keep track of your monthly spending trends</h3>
-                  <p class="expense-card-text"></p>
-              </div>
-          </div>
-      </div>
+            <div class="slider-wrapper">
+                <div class="expense-card">
+                    <img src="./images/expense-card-img-1.png" alt="Online Banking" class="expense-card-icon">
+                    <h3 class="expense-card-title">Stay on Top View all your expenses in one place</h3>
+                    <p class="expense-card-text"></p>
+                </div>
+    
+                <div class="expense-card">
+                    <img src="./images/expense-card-img-2.png" alt="Simple Budgeting" class="expense-card-icon">
+                    <h3 class="expense-card-title">Add new expenses with just a few taps</h3>
+                    <p class="expense-card-text"></p>
+                </div>
+    
+                <div class="expense-card">
+                    <img src="./images/expense-card-img-3.png" alt="Fast Onboarding" class="expense-card-icon">
+                    <h3 class="expense-card-title">Categorize spending for better organization</h3>
+                    <p class="expense-card-text"></p>
+                </div>
+    
+                <div class="expense-card">
+                    <img src="./images/expense-card-img-4.png" alt="Open API" class="expense-card-icon">
+                    <h3 class="expense-card-title">Keep track of your monthly spending trends</h3>
+                    <p class="expense-card-text"></p>
+                </div>
+            </div>
+        </div>
   
 
       </section>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+      
+          let index = 0;
+          const sliderWrapper = document.querySelector(".slider-wrapper");
+          const expenseCards = document.querySelectorAll(".expense-card");
+      
+          function updateSlider() {
+              const screenWidth = window.innerWidth;
+              console.log("Screen Width: ", screenWidth);
+      
+              let totalSlides;
+      
+              if (screenWidth <= 500) {
+                  totalSlides = expenseCards.length; 
+              } else {
+                  totalSlides = Math.ceil(expenseCards.length / 2);
+              }
+      
+              // Increment the index and ensure it loops back when it reaches the end
+              index = (index + 1) % totalSlides;
+      
+              // For 2 cards per slide, move the wrapper by 200% for each slide
+              const moveBy = screenWidth <= 500 ? 100 : 100; // 100% for mobile, 200% for desktop
+              sliderWrapper.style.transform = `translateX(-${index * moveBy}%)`;
+          }
+      
+          // Call the updateSlider function every 1 second (1000ms)
+          setInterval(updateSlider, 3000);
+        });
+
+      </script>
 
 
       <!--
@@ -469,6 +510,8 @@
 
   <script>
 
+    console.log("Script Loaded");
+
     const navbarToggleBtn = document.querySelector('.navbar-toggle-btn');
     const navbarNav = document.querySelector('.navbar-nav');
 
@@ -477,28 +520,7 @@
       navbarNav.classList.toggle('active');
     }
 
-    navbarToggleBtn.addEventListener('click', navbarToggleFunc);
-
-    let index = 0;
-    const sliderWrapper = document.querySelector(".slider-wrapper");
-    const expenseCards = document.querySelectorAll(".expense-card");
-    
-    function updateSlider() {
-        const screenWidth = window.innerWidth;
-        const slidesPerView = screenWidth <= 600 ? 1 : 2; // 1 card per view on mobile, 2 on desktop
-        const totalSlides = Math.ceil(expenseCards.length / slidesPerView); // Correct calculation
-    
-        index = (index + 1) % totalSlides; // Loop back to start
-        const translateX = -(index * (100 / slidesPerView)); // Move slides
-    
-        sliderWrapper.style.transform = `translateX(${translateX}%)`;
-    }
-    
-    // Start auto-slide every 3 seconds
-    setInterval(updateSlider, 3000);
-    
-
-
+    navbarToggleBtn.addEventListener('click', navbarToggleFunc);    
   </script>
 
   <!--
