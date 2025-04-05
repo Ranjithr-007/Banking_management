@@ -732,6 +732,11 @@ footer .btn-primary { margin-bottom: 30px; }
   color: #333;
 }
 
+.goal-card-title {
+  font-size: 1.5rem;
+  color: #333;
+}
+
 .expense-card-text {
   font-size: 1rem;
   color: #555;
@@ -842,7 +847,7 @@ footer .btn-primary { margin-bottom: 30px; }
 
 .explore-video {
   width: 767px;
-  height: 900px;
+  height: 500px;
 }
 
 @media (max-width: 600px) {
@@ -878,5 +883,20 @@ footer .btn-primary { margin-bottom: 30px; }
 
   .service {
     padding: 60px 0;
+  }
+}
+
+
+@media (min-width: 1200px) and (max-width: 1300px) {
+  .home-title {
+    min-width: 600px;
+  }
+
+  .banner-video {
+    width: 650px
+  }
+
+  .navbar {
+    margin-left: -30px;
   }
 }
