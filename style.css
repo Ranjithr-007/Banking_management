@@ -693,7 +693,7 @@ footer .btn-primary { margin-bottom: 30px; }
 
 
 .slider-container {
-  width: 1300px;
+  max-width: 1300px;
   overflow: hidden;
   margin: auto;
   position: relative;
@@ -776,7 +776,7 @@ footer .btn-primary { margin-bottom: 30px; }
 
 @media (max-width: 600px) {
   .slider-wrapper {
-      max-width: 1300px;
+      max-width: 100%;
   }
 
   .expense-card {
