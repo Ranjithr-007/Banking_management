@@ -776,7 +776,7 @@ footer .btn-primary { margin-bottom: 30px; }
 
 @media (max-width: 600px) {
   .slider-wrapper {
-      width: 100%;
+      max-width: 1300px;
   }
 
   .expense-card {
