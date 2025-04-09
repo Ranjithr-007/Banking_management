@@ -846,7 +846,7 @@ footer .btn-primary { margin-bottom: 30px; }
 }
 
 .explore-video {
-  width: 767px;
+  max-width: 767px;
   height: 500px;
 }
 
