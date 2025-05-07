@@ -839,6 +839,12 @@ footer .btn-primary { margin-bottom: 30px; }
   gap: 2rem;
 }
 
+@media (max-width: 700px) {
+  .footer-section {
+    min-height: 35vh;
+  }
+}
+
 .banner-video {
   width: 767px;
   height: 900px;
