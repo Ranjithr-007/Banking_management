@@ -921,7 +921,12 @@ footer .btn-primary { margin-bottom: 30px; }
 }
 
 @media (max-width: 700px) {
-  
+  .support-page-section {
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
   
   .contact-details-1 {
     font-size: 24px;
